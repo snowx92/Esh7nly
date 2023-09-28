@@ -1,0 +1,282 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<html>
+<head>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	
+	
+	<link rel="stylesheet" href="css/chat.css">
+	
+	 <title>Quicker-Admin-Chat</title>
+	<link rel="icon"  href="img/toplogo.jpeg">
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+	 
+		 
+<div class="container">
+	 <main>
+<h3 class=" text-center">Messaging</h3>
+<div class="messaging">
+      <div class="inbox_msg">
+        <div class="inbox_people">
+          <div class="headind_srch">
+            <div class="recent_heading">
+              <h4>Recent</h4>
+            </div>
+            <div class="srch_bar">
+              <div class="stylish-input-group">
+                
+                <span class="input-group-addon">
+					<input type="text" class="search-bar"  placeholder="Search" >
+                <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                </span> </div>
+            </div>
+          </div>
+          <div class="inbox_chat">
+			  
+			  
+            <div class="chat_list active_chat">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions 
+                    astrology under one roof.</p>
+                </div>
+              </div>
+            </div>
+			  
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions 
+                    astrology under one roof.</p>
+                </div>
+              </div>
+            </div>
+			  
+			  
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions 
+                    astrology under one roof.</p>
+                </div>
+              </div>
+            </div>
+			  
+			  
+			  
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions 
+                    astrology under one roof.</p>
+                </div>
+              </div>
+            </div>
+			  
+			  
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions 
+                    astrology under one roof.</p>
+                </div>
+              </div>
+            </div>
+			  
+			  
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions 
+                    astrology under one roof.</p>
+                </div>
+              </div>
+            </div>
+			  
+			  
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions 
+                    astrology under one roof.</p>
+                </div>
+              </div>
+            </div>
+			  
+          </div>
+        </div>
+		  
+		  
+        <div class="mesgs">
+			
+			
+          <div class="msg_history">
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Test which is a new approach to have all
+                    solutions</p>
+                  <span class="time_date"> 11:01 AM    |    June 9</span></div>
+              </div>
+            </div>
+            <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p>Test which is a new approach to have all
+                  solutions</p>
+                <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+            </div>
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Test, which is a new approach to have</p>
+                  <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+              </div>
+            </div>
+            <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p>Apollo University, Delhi, India Test</p>
+                <span class="time_date"> 11:01 AM    |    Today</span> </div>
+            </div>
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>We work directly with our designers and suppliers,
+                    and sell direct to you, which means quality, exclusive
+                    products, at a price anyone can afford.</p>
+                  <span class="time_date"> 11:01 AM    |    Today</span></div>
+              </div>
+            </div>
+          </div>
+			
+			
+          <div class="type_msg">
+            <div class="input_msg_write">
+              <input type="text" class="write_msg" placeholder="Type a message" />
+              <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+  
+      
+    </div>
+		
+			   </main>
+	 <div id="sidebar">
+            <div class="sidebar__title">
+                <div class="sidebar__img">
+                    <img src="img/avatar.png" alt="">
+                    <h1>Codersbite</h1>
+                </div>
+                <i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
+            </div>
+
+            <div class="sidebar__menu">
+                <div class="sidebar__link ">
+                    <i class="fa fa-home"></i>
+                    <a href="Admin.html">Dashboard</a>
+                </div>
+                <h2>MNG</h2>
+
+                <div class="sidebar__link">
+                    <i class="fa fa-user-secret"></i>
+                    <a href="AdminNotifications.html">Admin Notifications</a>
+                </div>
+
+                <div class="sidebar__link">
+                    <i class="fa fa-building-o"></i>
+                    <a href="ImportUsersInfo.html">Import User Info</a>
+                </div>
+
+                <div class="sidebar__link ">
+                    <i class="fa fa-wrench"></i>
+                    <a href="USERMONEYADMIN.html">User Money Reports</a>
+                </div>
+
+                <div class="sidebar__link">
+                    <i class="fa fa-archive"></i>
+                    <a href="SearchReport.html">Search Report</a>
+                </div>
+
+               <div class="sidebar__link ">
+					<i class="fa fa-handshake-o"></i>
+						<a href="BlockUser.html">Block User</a>
+					</div>
+					
+					<div class="sidebar__link ">
+					<i class="fa fa-question"></i>
+						<a href="UserDidn'tOrder.html">No Order User</a>
+                </div>
+				 <div class="sidebar__link">
+                    <i class="fa fa-sign-out"></i>
+                    <a href="EditOrder.html">Edit Orders</a>
+                </div>
+
+                <div class="sidebar__link active_menu_link">
+                    <i class="fa fa-sign-out"></i>
+                    <a href="chat.html">Chat</a>
+                </div>
+
+              
+
+                <div class="sidebar__link">
+                    <i class="fa fa-files-o"></i>
+                    <a href="#">Apply for leave</a>
+                </div>
+
+                <h2>PAYROLL</h2>
+
+                <div class="sidebar__link">
+                    <i class="fa fa-money"></i>
+                    <a href="#">Payroll</a>
+                </div>
+
+                <div class="sidebar__link">
+                    <i class="fa fa-briefcase"></i>
+                    <a href="#">Paygrade</a>
+                </div>
+
+                <div class="sidebar__logout">
+                    <i class="fa fa-power-off"></i>
+                    <a href="#">Logout</a>
+                </div>
+
+            </div>
+        </div>
+	</div>
+    </body>
+    </html>

@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+ <title>Quicker-Admin-Order</title>
+	<link rel="icon"  href="img/toplogo.jpeg">
+	   <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<link rel="stylesheet" href="css/adminorder.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+</head>
+	<body>
+		<div class="container"> //
+			<nav class="navbar">
+			  <div class="nav_icon" onclick="toggleSidebar()">
+				  <i class="fa fa-bars"></i>
+				</div>
+				<div class="navbar__left">
+					<a href="User.html" >Users</a>
+					<a href="order.html" class="active_link">Orders</a>
+					<a href="Admin.html" >Admin</a>
+				</div>
+				<div class="navbar__right">
+					<a href="#">
+					   <i class="fa fa-search"></i>
+					</a>
+					<a href="#">
+					   <i class="fa fa-clock-o"></i>
+					</a>
+					<a href="#">
+						<img width="30" src="avatar.png" alt="">
+					</a>
+				</div>
+			</nav>
+			<main>
+			 <div class="main__container">
+				<div class="main__title">
+				
+					<div class="main_greeting">
+						<h1>Order reports</h1>
+						<p>Delete , detactive and check</p>
+					</div>
+					 </div>
+				 
+				 	<div class="centerr">
+		<div class="row">
+			
+   					<div class="col">
+						<div class ="datee" >
+                        <label class="hi" for="start">الي </label>
+                        <input type="date" id="ela" class="form-control" name="date"
+                         value="yyyy-MM-dd"
+                         min="2020-09-16" max="2020-12-31">
+						</div>
+						
+					</div>
+						<div class="col">
+						<div class ="datee" >
+							<label class="hi" for="start">من </label>
+                        <input type="date" id="mn" class="form-control" name="date"
+                         value="yyyy-MM-dd" 
+							   
+                        min="2020-09-16" max="2020-12-31" >
+						</div>
+					</div>
+		</div>
+		</div>	
+					<div class="center">
+
+
+
+						<table>
+							<tr>
+								<th>الحالة</th>
+								<th>الاسم</th>
+
+							</tr>
+							<tr>
+								<td id="total">0</td>
+								<td>مجموع الاوردرات </td>
+
+							</tr>
+							<tr>
+								<td id="avalibl">0</td>
+								<td>الاوردرات المتاحة</td>
+
+							</tr>
+							<tr>
+								<td id="accpeted">0</td>
+								<td>الاوردرات المقبولة</td>
+
+							</tr>
+							<tr>
+								<td id="kedaltslem">0</td>
+								<td>الاوردرات قيد التسليم</td>
+
+							</tr>
+							<tr>
+								<td id="dilvered">0</td>
+								<td>اوردرات تم تسليمها</td>
+
+							</tr>
+							<tr>
+								<td id="deleted">0</td>
+								<td>اوردرات ملغية</td>
+
+							</tr>
+							<tr>
+								<td id="back">0</td>
+								<td>مرتجعات</td>
+
+							</tr>
+							<tr>
+								<td id="mokdam">0</td>
+								<td>مجموع المقدمات</td>
+
+							</tr>
+							<tr>
+								<td id="shan">0</td>
+								<td>مجموع مصاريف الشحن</td>
+
+							</tr>
+							<tr>
+								<td id="money">0</td>
+								<td>مجموع المستحقات</td>
+
+							</tr>
+
+						</table>
+						<button class="btn" type="submit" onclick="getReports()">اظهار التقارير</button>
+					</div>
+					
+				</div>
+			</main>
+			
+			
+			<div id="sidebar">
+				<div class="sidebar__title">
+				<div class="sidebar__img">
+					<img src="img/avatar.png" alt="">
+					<h1>Codersbite</h1>
+					</div>
+					<i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
+				</div>
+				
+				<div class="sidebar__menu">
+				<div class="sidebar__link active_menu_link">
+					<i class="fa fa-home"></i>
+					<a href="adminorder.html">Dashboard</a>
+					</div>
+					<h2>MNG</h2>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-user-secret"></i>
+						<a href="AdminNotifications.html">Admin Notifications</a>
+					</div>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-building-o"></i>
+						<a href="ImportUsersInfo.html">Import User Info</a>
+					</div>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-wrench"></i>
+						<a href="USERMONEYADMIN.html">User Money Reports</a>
+					</div>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-archive"></i>
+						<a href="SearchReport.html">Search Report</a>
+					</div>
+					
+						<div class="sidebar__link ">
+					<i class="fa fa-handshake-o"></i>
+						<a href="BlockUser.html">Block User</a>
+					</div>
+					
+					<div class="sidebar__link ">
+					<i class="fa fa-question"></i>
+						<a href="UserDidn'tOrder.html">No Order User</a>
+					</div>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-sign-out"></i>
+						<a href="EditOrder.html">Edit Orders</a>
+					</div>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-calendar-check-o"></i>
+						<a href="chat.html">Chat</a>
+					</div>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-files-o"></i>
+						<a href="#">Apply for leave</a>
+					</div>
+					
+					<h2>PAYROLL</h2>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-money"></i>
+						<a href="#">Payroll</a>
+					</div>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-briefcase"></i>
+						<a href="#">Paygrade</a>
+					</div>
+					
+					<div class="sidebar__logout">
+					<i class="fa fa-power-off"></i>
+						<a href="#">Logout</a>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		  <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: 'AIzaSyCVIyIfWmXXRN_Bv5-c34gYK907Pw798Uk',
+            authDomain: 'pickly-ed2f4.firebaseapp.com',
+            databaseURL: 'https://pickly-ed2f4.firebaseio.com',
+            projectId: 'pickly-ed2f4',
+            storageBucket: 'pickly-ed2f4.appspot.com',
+            messagingSenderId: '146413958165',
+            appId: '1:146413958165:web:b1ea7307bd1413c4dd0a1c',
+            measurementId: 'G-HV6VCFCH1Z',
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+
+    </script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<script src="js/adminorder.js"></script>
+		
+	</body>
+</html>
